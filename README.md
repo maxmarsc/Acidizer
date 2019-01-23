@@ -24,3 +24,5 @@ The plugin is composed of six knobs and a filter type selection menu. The name o
 
 ## Notes
 Most of the range of the parameter were set while experimenting with the plugin to make the sounds __I like__. I'm also pretty new to these frameworks and techs, so don't hesitate to give feedback !
+And if ever you'd like to know what kind of sounds I like here is my soundcloud :<br>
+https://soundcloud.com/user-155802894-310997774
