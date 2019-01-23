@@ -10,9 +10,6 @@
 
 #include "AcidizerParameter.h"
 
-AcidizerParameter::AcidizerParameter()
-{
-}
 
 AcidizerParameter::AcidizerParameter(AcidizerAudioProcessor& p, std::string name, std::string id, int xPos, int yPos) :
 	name(name), id(id), xPos(xPos), yPos(yPos)

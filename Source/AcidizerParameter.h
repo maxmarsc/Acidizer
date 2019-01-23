@@ -26,8 +26,6 @@ class AcidizerParameter
 
 public:
 
-	AcidizerParameter::AcidizerParameter();
-
 	AcidizerParameter::AcidizerParameter(AcidizerAudioProcessor& p, std::string name, std::string id, int xPos, int yPos);
 	AcidizerParameter::~AcidizerParameter();
 
