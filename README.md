@@ -26,6 +26,7 @@ The plugin is composed of six knobs and a filter type selection menu. The name o
 Here is a link to download the VST2 and VST3 builds of the Acidizer. Be aware it might not be the latest build.<br>
 LATEST UPLOAD : 23/01/2019<br>
 https://www.mediafire.com/file/ahi4f6ed8fbh8kc/AcidizerVST.rar/file
+*Tested with Ableton Live Lite 9*
 
 ## Notes
 Most of the range of the parameter were set while experimenting with the plugin to make the sounds __I like__. I'm also pretty new to these frameworks and techs, so don't hesitate to give feedback !
