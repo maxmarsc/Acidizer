@@ -1,9 +1,7 @@
 /*
   ==============================================================================
 
-    This file was auto-generated!
-
-    It contains the basic framework code for a JUCE plugin editor.
+    The main GUI component
 
   ==============================================================================
 */
@@ -20,6 +18,7 @@ AcidizerAudioProcessorEditor::AcidizerAudioProcessorEditor (AcidizerAudioProcess
 	hardenParameter(std::make_unique<AcidizerParameter>(p, "Hard", "harden", 1, 1)),
 	blendParameter(std::make_unique<AcidizerParameter>(p, "Blend", "blend", 2, 1))
 {
+	/*	We let the parameters set themselves up on the UI according to their parameters */
 	freqParameter->setupSlider(*this);
 	resParameter->setupSlider(*this);
 	volumeParameter->setupSlider(*this);
@@ -27,6 +26,7 @@ AcidizerAudioProcessorEditor::AcidizerAudioProcessorEditor (AcidizerAudioProcess
 	hardenParameter->setupSlider(*this);
 	blendParameter->setupSlider(*this);
 
+	/*  We setup the filter menu directly in here, as it is the only ComboBox of the plugin*/
 	addAndMakeVisible(&filterMenu);
 	filterMenu.addItem("Low Pass", 1);
 	filterMenu.addItem("Band Pass", 2);
@@ -34,6 +34,7 @@ AcidizerAudioProcessorEditor::AcidizerAudioProcessorEditor (AcidizerAudioProcess
 	filterMenu.addItem("No Filter", 4);
 	filterMenu.setJustificationType(Justification::centred);
 	
+	/*  We declare the ComboBox attachment */
 	filterMenuChoice = std::make_unique<AudioProcessorValueTreeState::ComboBoxAttachment>
 		(p.treeState, "choice", filterMenu);
 
@@ -46,6 +47,7 @@ AcidizerAudioProcessorEditor::AcidizerAudioProcessorEditor (AcidizerAudioProcess
 
 AcidizerAudioProcessorEditor::~AcidizerAudioProcessorEditor()
 {
+	//Nothing to do here
 }
 
 //==============================================================================
@@ -54,6 +56,7 @@ void AcidizerAudioProcessorEditor::paint (Graphics& g)
     // (Our component is opaque, so we must completely fill the background with a solid colour)
     g.fillAll (getLookAndFeel().findColour (ResizableWindow::backgroundColourId));
 
+	// We tell the parameter to draw their name above them
 	freqParameter->drawName(g);
 	resParameter->drawName(g);
 	volumeParameter->drawName(g);
@@ -65,15 +68,17 @@ void AcidizerAudioProcessorEditor::paint (Graphics& g)
 
 void AcidizerAudioProcessorEditor::resized()
 {
-    // This is generally where you'll want to lay out the positions of any
-    // subcomponents in your editor..
-	freqParameter->resized();
-	resParameter->resized();
-	volumeParameter->resized();
-	driveParameter->resized();
-	hardenParameter->resized();
-	blendParameter->resized();
+	/*	The plugin is not really meant to be resized.
+		For now, if the user resize it, nothing moves dynamically.
+		Could be changed in the near future, but it is not really interesting to do. */
+    
+	// The parameters set themselves as usual
+	freqParameter->resizedCalled();
+	resParameter->resizedCalled();
+	volumeParameter->resizedCalled();
+	driveParameter->resizedCalled();
+	hardenParameter->resizedCalled();
+	blendParameter->resizedCalled();
 
 	filterMenu.setBounds(175, 15, 100, 25);
-
 }

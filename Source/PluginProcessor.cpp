@@ -1,9 +1,7 @@
 /*
   ==============================================================================
 
-    This file was auto-generated!
-
-    It contains the basic framework code for a JUCE plugin processor.
+  The audio processing component
 
   ==============================================================================
 */
@@ -262,8 +260,10 @@ void AcidizerAudioProcessor::distoProcess(AudioBuffer<float>& buffer, int totalN
 		float* channelBuffer = buffer.getWritePointer(channel);
 		for (int sample = 0; sample < buffer.getNumSamples(); ++sample) {
 			float cleanSignal = channelBuffer[sample];
-
+			
+			// Standard 2*atan/pi clipping
 			float distoredSignal = 2.0 * atan(cleanSignal * drive) / float_Pi;
+			// Proportion btw ^1.5 (soft) and ^0.5 (hard) clipping
 			distoredSignal = (pow(distoredSignal, 0.5f) * (harden) + pow(distoredSignal, 1.5f) * (1 - harden));
 			channelBuffer[sample] = volume * (distoredSignal*blend + cleanSignal * (1.0f - blend)) / 2.0f;
 		}

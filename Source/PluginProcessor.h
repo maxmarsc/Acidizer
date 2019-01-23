@@ -1,9 +1,10 @@
 /*
   ==============================================================================
 
-    This file was auto-generated!
+    The audio processing component
 
-    It contains the basic framework code for a JUCE plugin processor.
+	A lot of this code is generated automatically by JUCE when first creating
+	an Audio Plugin project
 
   ==============================================================================
 */
@@ -18,9 +19,7 @@
 #include "AcidizerParameter.h"
 #include "PluginEditor.h"
 
-//==============================================================================
-/**
-*/
+
 class AcidizerAudioProcessor  : public AudioProcessor
 {
 public:
@@ -65,15 +64,19 @@ public:
 	AudioProcessorValueTreeState treeState;
 
 private:
-    //==============================================================================
-	// We choose a SVF because acid sounds are based on cutoff modulations among others
+	//The State Variable Filter itself
 	dsp::ProcessorDuplicator<dsp::StateVariableFilter::Filter<float>, 
-	dsp::StateVariableFilter::Parameters<float>> filter;
+		dsp::StateVariableFilter::Parameters<float>> filter;
+	//The global sample rate used by the plugin
 	double globalSampleRate;
-
+	// Tells if the user choosed to use the filter or not 
 	bool filterOn;
+
+	// Update the filter with the current parameters
 	void updateFilter();
+	// Process in place the audio transformation of the filter
 	void filterProcess(AudioBuffer<float>& buffer);
+	// Process in place the audio transformation of the distortion
 	void distoProcess(AudioBuffer<float>& buffer, int totalNumInputChannels);
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AcidizerAudioProcessor)

@@ -39,7 +39,7 @@ void AcidizerParameter::setupSlider(AcidizerAudioProcessorEditor& gui)
 	knob.setPopupDisplayEnabled(true, true, &gui);
 }
 
-void AcidizerParameter::resized()
+void AcidizerParameter::resizedCalled()
 {
 	knob.setBounds(50 + xPos * 125, 80 + yPos * 150, 100, 100);
 }
