@@ -7,7 +7,8 @@ I made it for personnal entertainment so it is probably not going to evolve much
 This plugin was built using the C++ JUCE Framework. For more information check both their website and github :<br>
 https://juce.com/<br>
 https://github.com/WeAreROLI/JUCE/tree/af041a02d764e3120865664f5e4b8134914c2dd6<br>
-It has native build methods for VST3, AU, AUv3, RTAS, AAX and Unity.
+It has native build methods for VST3, AU, AUv3, RTAS, AAX and Unity.<br><br>
+If you want to build the plugin by yourself, simply open the __.jucer__ file with Projucer and set your builds and IDE configuration.
 
 ## Acidizer Plugin
 ### Principle
