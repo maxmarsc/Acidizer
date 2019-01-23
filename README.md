@@ -19,7 +19,8 @@ Then the sounds pass through a __distortion__ module, with three configurable pa
  - __Blend__ : Set the proportion between distorded signal and undistorded signal (which already passed through the filter)
   
 ### UI
-The plugin is composed of six knobs and a filter type selection menu. The name of each knobs indicate what parameter (see above) it controls. The *Volume* one simply controls the final volume of the signal after processing.
+The plugin is composed of six knobs and a filter type selection menu. The name of each knobs indicate what parameter (see above) it controls. The *Volume* one simply controls the final volume of the signal after processing.<br>
+![Acidizer UI](UIExample.png)
 
 ## Notes
 Most of the range of the parameter were set while experimenting with the plugin to make the sounds __I like__. I'm also pretty new to these frameworks and techs, so don't hesitate to give feedback !
