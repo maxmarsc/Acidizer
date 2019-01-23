@@ -23,8 +23,8 @@ The plugin is composed of six knobs and a filter type selection menu. The name o
 ![Acidizer UI](UIExample.png)
 
 ### Download
-Here is a link to download the VST2 and VST3 builds of the Acidizer. Be aware it might not be the latest build.
-LATEST UPLOAD : 23/01/2019
+Here is a link to download the VST2 and VST3 builds of the Acidizer. Be aware it might not be the latest build.<br>
+LATEST UPLOAD : 23/01/2019<br>
 https://www.mediafire.com/file/ahi4f6ed8fbh8kc/AcidizerVST.rar/file
 
 ## Notes
