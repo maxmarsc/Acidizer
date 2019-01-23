@@ -22,6 +22,11 @@ Then the sounds pass through a __distortion__ module, with three configurable pa
 The plugin is composed of six knobs and a filter type selection menu. The name of each knobs indicate what parameter (see above) it controls. The *Volume* one simply controls the final volume of the signal after processing.<br>
 ![Acidizer UI](UIExample.png)
 
+### Download
+Here is a link to download the VST2 and VST3 builds of the Acidizer. Be aware it might not be the latest build.
+LATEST UPLOAD : 23/01/2019
+https://www.mediafire.com/file/ahi4f6ed8fbh8kc/AcidizerVST.rar/file
+
 ## Notes
 Most of the range of the parameter were set while experimenting with the plugin to make the sounds __I like__. I'm also pretty new to these frameworks and techs, so don't hesitate to give feedback !
 And if ever you'd like to know what kind of sounds I like here is my soundcloud :<br>
